@@ -4,7 +4,7 @@ export function withdraw(clients, balances, client, amount) {
   if (balances[indexOfPerson] < amount) {
     return -1;
   }
-  // eslint-disable-next-line no-param-reassign
+
   balances[indexOfPerson] -= amount;
   return balances[indexOfPerson];
 }
