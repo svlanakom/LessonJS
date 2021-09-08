@@ -1,11 +1,11 @@
-function getItemList() {
+export function getItemList() {
   const elementList = document.querySelectorAll(".technology");
   console.dir(elementList);
   return elementList;
 }
 getItemList();
 
-function getItemsArray() {
+export function getItemsArray() {
   const elementsArray = document.querySelectorAll(".tool");
   console.dir(elementsArray);
   return Array.From.elementsArray;
