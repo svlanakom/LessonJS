@@ -1,7 +1,7 @@
 export function getItemList() {
-  const elementList = document.querySelectorAll(".technology");
-  console.dir(elementList);
-  return elementList;
+  const elementsList = document.querySelectorAll(".technology");
+  console.dir(elementsList);
+  return elementsList;
 }
 getItemList();
 
