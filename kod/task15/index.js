@@ -43,8 +43,11 @@ renderTasks(tasks);
 // 2. create event handlers
 
 const createBtnElement = document.querySelector(".create-task-btn");
+//  функция обработчик function onCreateTask(event)  принимает:
 // input obj (event)
 // output undefined
+const inputElement = document.querySelector(".task-input");
+//   console.dir(inputElement);
 
 // algo
 // 1. get data
@@ -60,9 +63,8 @@ const createBtnElement = document.querySelector(".create-task-btn");
 function onCreateTask(event) {
   //   console.log(event);
 
-  const inputElement = document.querySelector(".task-input");
-  //   console.dir(inputElement);
-  const { value } = inputElement;
+  // const { value } = inputElement;
+  const value = inputElement.value;
 
   //   console.log(value);
   tasks.push({
@@ -80,7 +82,7 @@ createBtnElement.addEventListener("click", onCreateTask);
 
 // //
 
-// // 1. chech if clicked checbox
+// // 1. check if clicked checbox
 // // 2. finde task where clicked
 // // 3. update task
 // // 4. re-render
