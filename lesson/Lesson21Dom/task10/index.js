@@ -7,5 +7,3 @@ export function finishForm() {
   form.prepend(input);
   document.querySelector("[name=password]").setAttribute("type", "password");
 }
-
-finishForm();
