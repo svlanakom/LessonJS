@@ -9,7 +9,7 @@
 // // input number index (optional),array (optional)
 // // output number
 
-// // option 1
+// // option 1 map()
 // const mapRes = numbersList.map(function (el, index, aaray) {
 //   //   console.log(el);
 //   //     console.log(index);
