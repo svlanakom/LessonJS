@@ -8,7 +8,7 @@ export function manageClasses() {
   two.classList.remove("selected");
   three.classList.toggle("three_done");
 
-  if (four.includes("some-class")) {
+  if (four.outerHTML.includes("some-class")) {
     four.classList.add("another-class");
   }
 }
