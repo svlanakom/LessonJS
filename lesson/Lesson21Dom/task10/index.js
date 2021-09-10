@@ -1,4 +1,4 @@
-export function finishForm() {
+function finishForm() {
   const form = document.querySelector(".login-form");
 
   const input = document.createElement("input");
@@ -7,3 +7,4 @@ export function finishForm() {
   form.prepend(input);
   document.querySelector("[name=password]").setAttribute("type", "password");
 }
+finishForm();
