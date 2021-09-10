@@ -1,4 +1,4 @@
-function squaredNumbers() {
+export function squaredNumbers() {
   const elementsList = document.querySelectorAll(".number");
   elementsList.forEach((el) => {
     const value = el.getAttribute("data-number");
