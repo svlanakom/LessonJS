@@ -1,7 +1,7 @@
 const butn = document.querySelector(".single-use-btn");
 
 function action() {
-  console.log("clacked");
+  console.log("clicked");
   butn.removeEventListener("click", action);
 }
 
