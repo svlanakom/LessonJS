@@ -62,14 +62,15 @@ createButton.addEventListener("click", addTask);
 
 function doneTask(event) {
   const elemId = event.target.dataset.id;
-  // const checkBoxElem = document.querySelector(`[data-id='${elemId}']`);
 
-  console.log(event.target);
-  // console.log(tasks);
-  if (tasks.find((task) => Number(task.id) === Number(elemId)).done) {
-    tasks.find((task) => Number(task.id) === Number(elemId)).done = false;
+  // console.log(event.target);
+
+  const currentItem = tasks.find((task) => Number(task.id) === Number(elemId));
+
+  if (currentItem.done) {
+    currentItem.done = false;
   } else {
-    tasks.find((task) => Number(task.id) === Number(elemId)).done = true;
+    currentItem.done = true;
   }
 
   listElem.innerHTML = "";
