@@ -22,6 +22,7 @@ const renderTasks = (tasksList) => {
   const tasksElems = tasksList
     .sort((a, b) => a.done - b.done)
     .map(({ text, done, id }) => {
+      console.log(text, done, id);
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
 
