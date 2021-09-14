@@ -63,16 +63,16 @@ createButton.addEventListener("click", addTask);
 function doneTask(event) {
   const elemId = event.target.dataset.id;
 
-  // console.log(event.target);
+  console.log(event.target.dataset.id);
 
   const currentItem = tasks.find((task) => Number(task.id) === Number(elemId));
-
+  console.log(currentItem);
   if (currentItem.done) {
     currentItem.done = false;
   } else {
     currentItem.done = true;
   }
-
+  console.log(currentItem);
   listElem.innerHTML = "";
   renderTasks(tasks);
 
