@@ -1,10 +1,9 @@
 localStorage.clear();
-// localStorage.setItem("nUUmber", JSON.stringify(11));
-// localStorage.setItem("string", JSON.stringify("ann"));
-// localStorage.setItem("NULL", JSON.stringify(null));
-// localStorage.setItem("obj", JSON.stringify({ name: "12" }));
+localStorage.setItem("age", JSON.stringify(11));
+localStorage.setItem("name", JSON.stringify("ann"));
+localStorage.setItem("object", JSON.stringify({ name: "3" }));
 
-export const getLocalStorageData = () =>
+const getLocalStorageData = () =>
   Object.entries(localStorage).reduce((acc, [key, value]) => {
     let newValue;
     try {
