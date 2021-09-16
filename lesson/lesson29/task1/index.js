@@ -27,7 +27,7 @@
 //   onImageLoaded
 // );
 
-export const addImage = (imgSrc, callback) => {
+const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement("img");
   imgElem.setAttribute("alt", "My photo");
   imgElem.src = imgSrc;
@@ -48,9 +48,15 @@ const onImageLoaded = (error, data) => {
   sizeElem.textContent = `${data.width} x ${data.height}`;
 };
 
-// examples;
+// // examples;
+// addImage(
+//   // "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
+//   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigsstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
+//   onImageLoaded
+// );
+
+// examples
 addImage(
   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
-  // "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigsstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
   onImageLoaded
 );
