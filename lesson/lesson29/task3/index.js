@@ -3,7 +3,7 @@
 /**
  * @return {undefined}
  */
-exports. const printing = () => {
+export const printing = () => {
   console.log(1);
 
   setTimeout(function () {
