@@ -19,10 +19,10 @@
 //     console.log(error);
 //     return;
 //   }
-//   const { width, height } = data;
-//   const sizeElem = document.querySelector(".image-size");
+// const { width, height } = data;
+// const sizeElem = document.querySelector(".image-size");
 
-//   sizeElem.textContent = `${width} x ${height}`;
+// sizeElem.textContent = `${width} x ${height}`;
 // };
 
 // examples
@@ -46,9 +46,10 @@ const onImageLoaded = (error, data) => {
     console.log(error);
     return;
   }
+  const { width, height } = data;
   const sizeElem = document.querySelector(".image-size");
 
-  sizeElem.textContent = `${data.width} x ${data.height}`;
+  sizeElem.textContent = `${width} x ${height}`;
 };
 
 // examples;
