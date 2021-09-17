@@ -1,4 +1,4 @@
-export const getValueWithDelay = (value, delay) =>
+const getValueWithDelay = (value, delay) =>
   new Promise((resolve) => {
     setTimeout(() => {
       console.log(value);
@@ -13,7 +13,7 @@ const asyncNum4 = getValueWithDelay(44, 1000);
 
 //
 
-const asyncSum = (...asyncNumbers) =>
+export const asyncSum = (...asyncNumbers) =>
   Promise.all(asyncNumbers)
     .then((numbers) =>
       numbers // [11,22,33,44]
