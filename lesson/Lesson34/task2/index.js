@@ -1,18 +1,18 @@
 const baseUr1 = "https://61488a44035b3600175b9eb9.mockapi.io/users";
-function getUsersList() {
+export function getUsersList() {
   return fetch(`${baseUr1}`).then((response) => response.json());
 }
 
-getUsersList().then((users) => {
-  console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
-});
+// getUsersList().then((users) => {
+//   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
+// });
 
 export function getUserById(userId) {
   return fetch(`${baseUr1}/${userId}`).then((response) => response.json());
 }
-getUserById("2").then((userData) => {
-  console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
-});
+// getUserById("2").then((userData) => {
+//   console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
+// });
 
 export function createUser(userData) {
   return fetch(`${baseUr1}`, {
@@ -24,16 +24,16 @@ export function createUser(userData) {
   });
 }
 
-const newUserData = {
-  email: "cool@email.com",
-  firstName: "Iron",
-  lastName: "Man",
-  age: 42,
-};
+// const newUserData = {
+//   email: "cool@email.com",
+//   firstName: "Iron",
+//   lastName: "Man",
+//   age: 42,
+// };
 
-createUser(newUserData).then(() => {
-  console.log("User created");
-});
+// createUser(newUserData).then(() => {
+//   console.log("User created");
+// });
 
 export function updateUser(userId, userData) {
   return fetch(`${baseUr1}/${userId}`, {
@@ -45,16 +45,16 @@ export function updateUser(userId, userData) {
   });
 }
 
-const updatedUserData = {
-  email: "new@email.com",
-  firstName: "John",
-  lastName: "Doe",
-  age: 17,
-};
+// const updatedUserData = {
+//   email: "new@email.com",
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 17,
+// };
 
-updateUser("1", updatedUserData).then(() => {
-  console.log("User updated");
-});
+// updateUser("1", updatedUserData).then(() => {
+//   console.log("User updated");
+// });
 
 export function deleteUser(userId) {
   return fetch(`${baseUr1}/${userId}`, {
@@ -62,6 +62,6 @@ export function deleteUser(userId) {
   });
 }
 
-deleteUser("2").then(() => {
-  console.log("User updated");
-});
+// deleteUser("2").then(() => {
+//   console.log("User updated");
+// });
