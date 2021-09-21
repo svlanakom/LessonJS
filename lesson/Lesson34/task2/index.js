@@ -7,14 +7,14 @@ getUsersList().then((users) => {
   console.log(users); // array of the user objects [{'id':'1', 'firstName':'Grayce' ... }, {'id':'2', 'firstName':'Ara' ... }, ...]
 });
 
-function getUserById(userId) {
+export function getUserById(userId) {
   return fetch(`${baseUr1}/${userId}`).then((response) => response.json());
 }
 getUserById("2").then((userData) => {
   console.log(userData); // {'id':'2', 'firstName':'Ara' ... }
 });
 
-function createUser(userData) {
+export function createUser(userData) {
   return fetch(`${baseUr1}`, {
     method: "POST",
     headers: {
@@ -35,7 +35,7 @@ createUser(newUserData).then(() => {
   console.log("User created");
 });
 
-function updateUser(userId, userData) {
+export function updateUser(userId, userData) {
   return fetch(`${baseUr1}/${userId}`, {
     method: "PUT",
     headers: {
@@ -56,7 +56,7 @@ updateUser("1", updatedUserData).then(() => {
   console.log("User updated");
 });
 
-function deleteUser(userId) {
+export function deleteUser(userId) {
   return fetch(`${baseUr1}/${userId}`, {
     method: "DELETE",
   });
