@@ -1,6 +1,6 @@
 const obj = JSON.stringify({ name: "Alla" });
 
-const parseUser = (obj) => {
+export const parseUser = (obj) => {
   try {
     return JSON.parse(obj);
   } catch (err) {
