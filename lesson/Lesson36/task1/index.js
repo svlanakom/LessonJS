@@ -2,7 +2,7 @@
 export const fetchUser = async (userId) => {
   try {
     const response = await fetch(`https://api.github.com/users${userId}`);
-    if (!response.ok) {
+    if (!response.ok || response.status === 404) {
       return null;
     }
     const userData = await response.json();
