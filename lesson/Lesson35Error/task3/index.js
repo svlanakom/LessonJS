@@ -1,8 +1,4 @@
-import {
-  renderUserData,
-  renderRepos,
-  clearList,
-} from "./src/scripts/render.js";
+import {  renderUserData,  renderRepos,  clearList,} from "./src/scripts/render.js";
 import { showSpinner, hideSpinner } from "./src/scripts/spinner.js";
 import { fetchUserData, fetchRepositories } from "./src/scripts/apiRequests.js";
 
