@@ -1,5 +1,5 @@
 // eslint-disable-next-line consistent-return
-const fetchUser = async (userId) => {
+export const fetchUser = async (userId) => {
   try {
     const response = await fetch(`https://api.github.com/users${userId}`);
     if (!response.ok) {
@@ -12,6 +12,6 @@ const fetchUser = async (userId) => {
   }
 };
 
-fetchUser("facebook")
-  .then((userData) => console.log(userData))
-  .catch((err) => alert(err.message));
+fetchUser("facebook");
+//   .then((userData) => console.log(userData))
+//   .catch((err) => alert(err.message));
