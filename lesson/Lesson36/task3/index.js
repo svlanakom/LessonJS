@@ -1,4 +1,4 @@
-const getUsersBlogs = async (arr) => {
+export const getUsersBlogs = async (arr) => {
   const link = `https://api.github.com/users/`;
   // Promise.all(array)
   try {
