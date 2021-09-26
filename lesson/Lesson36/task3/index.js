@@ -1,4 +1,3 @@
-Div Developer, [26.09.21 20:53]
 const getUsersBlogs = async (arr) => {
   const link = `https://api.github.com/users/`;
   // Promise.all(array)
